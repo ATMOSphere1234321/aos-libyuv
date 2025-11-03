@@ -78,6 +78,7 @@ ifeq ($(LIBYUV_ENABLE_JPEG), "yes")
 LOCAL_SHARED_LIBRARIES := libjpeg
 endif
 
+LOCAL_LDFLAGS += -Wl,-z,max-page-size=16384
 include $(BUILD_SHARED_LIBRARY)
 
 include $(CLEAR_VARS)
